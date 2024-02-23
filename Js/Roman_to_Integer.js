@@ -22,7 +22,7 @@ For example, 2 is written as II in Roman numeral, just two ones added together. 
 
 {
 
-    let s = "IV";  // 27 // MMI == 2001
+    let Roman = "IV";  // 27 // MMI == 2001 
     let result = 0;
     let FirstNum  = 0; 
     let NextNum = 0 ;
@@ -36,13 +36,11 @@ For example, 2 is written as II in Roman numeral, just two ones added together. 
         ["M" , 1000]
     ]);
 
-    // console.log(romanNUm);
-
-    for (let index = 0; index < s.length; index++) {
+    for (let index = 0; index < Roman.length; index++) {
         
-        FirstNum = romanNUm.get(s[index]); // 0  = I  FistNum =  1 
+        FirstNum = romanNUm.get(Roman[index]); // 0  = I  FistNum =  1
         
-        NextNum = romanNUm.get(s[index+1]); // 1 = V  NextNum =  5 
+        NextNum = romanNUm.get(Roman[index+1]); // 1 = V  NextNum =  5
        // IV = 4 ==  I < V
         if (FirstNum < NextNum) {
             result += NextNum - FirstNum;
@@ -51,9 +49,10 @@ For example, 2 is written as II in Roman numeral, just two ones added together. 
         else{
             result += FirstNum ;
         }
+        console.log("Index value ",index);
     }
 
-    console.log(`Your Roman Number : ${s} `);
+    console.log(`Your Roman Number : ${Roman} `);
     console.log(">",result);
 }
 
