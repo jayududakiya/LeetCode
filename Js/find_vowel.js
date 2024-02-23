@@ -1,6 +1,7 @@
 {
     let vowel = ['a' , 'e' , 'i' , 'o' ,'u'];
-    let Names = prompt("Enter word :","");
+    // let Names = prompt("Enter word :",""); 
+    let Names = "Girishsir";
     let vowel_count = 0;
     let isVowel = "";
     let i = 0;
